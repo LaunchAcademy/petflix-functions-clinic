@@ -52,83 +52,24 @@ const allShows = [
 ]
 
 
-// 1. We heard raving reviews about all the llama dramas on Petflix! Create a function that returns every show in the `dramas` array that has the word `"Llama"` in it.
+// 1. We heard raving reviews about all the llama dramas on Petflix!
+//Create a function that returns every show in the `dramas` array that has the word `"Llama"` in it.
 
-const ravingLlamaMovies = (movieArray) => {
-  let llamaArray = []
 
-  movieArray.forEach((movie) => {
-    if (movie.includes("Llama")){
-      llamaArray.push(movie)
-    }
-  })
+// 2. We are very picky when it comes to our funny tv shows.
+//Write a function will return every show in our `comedies` array that does *NOT* have the word `"Cat"` in it.
 
-  return(llamaArray)
-}
-// 2. We are very picky when it comes to our funny tv shows. Write a function will return every show in our `comedies` array that does *NOT* have the word `"Cat"` in it.
 
-// const noCatMoviesAllowed = (moviesArray) => {
-//   let nonCatMoviesArray = []
-//
-//   moviesArray.forEach((movie) =>{
-//     if (!movie.includes("Cat")){
-//       nonCatMoviesArray.push(movie)
-//     }
-//   })
-//
-//   return(nonCatMoviesArray)
-// }
+// 3. Our significant other is a significant dog person.
+//Write a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
 
-const noCatMoviesAllowed = (moviesArray) => {
 
-  let nonCatMoviesArray = moviesArray.filter((movie) => {
-    return (!movie.includes("Cat"))
-  })
-
-  return(nonCatMoviesArray)
-}
-
-// 3. Our significant other is a significant dog person. Write a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
-
-const retrieveDogShows = (arrayofShows) => {
-  let dogShows = []
-
-  arrayofShows.forEach((show) => {
-    if (show.includes("Dog")) {
-      dogShows.push(show)
-    }
-  })
-
-  return(dogShows)
-}
 
 // 3.5. Do the same for cats!
-const retrieveCatShows = (arrayofShows) => {
-  let catShows = []
 
-  arrayofShows.forEach((show) => {
-    if (show.includes("Cat")) {
-      catShows.push(show)
-    }
-  })
-
-  return(catShows)
-}
 
 // 4. Write a function that takes in a string and an array of shows, and returns all shows from the given array that contain that substring.
 
-const returnShowsForSelection = (searchWord, showArray) => {
-  // let showsForSelection
-  let showsForSelection = []
-
-  showArray.forEach((show) => {
-    if (show.includes(searchWord)) {
-      showsForSelection.push(show)
-    }
-  })
-
-  return(showsForSelection)
-}
 
 const petFlixOptions = [
   "Search",
@@ -143,8 +84,10 @@ const errorMessages = [
   "404: Four-O-Fur Not Found"
 ]
 
-// 6. [For this step, you may want to work on each browsing option individually first. Also, you should be storing this functionality in seperate functions where possible]
-//Give the user a selection of browsing options shown in petFlixOptions. Begin by welcoming the user to petflix, and then display to them their options:
+// 5. [For this step, you may want to work on each browsing option individually first.
+//Also, you should be storing this functionality in seperate functions where possible]
+//Give the user a selection of browsing options shown in petFlixOptions.
+//Begin by welcoming the user to petflix, and then display to them their options:
 
 console.log("Welcome to Petflix")
 
@@ -152,7 +95,8 @@ console.log("Your options for browsing are:")
 
 console.log(petFlixOptions.join("\n"))
 
-// - If they choose search, then prompt for input and return any show that contains the substring of their search. If nothing is matched return a message: "No shows about that topic yet!" Use any functions you may have already created.
+// - If they choose search, then prompt for input and return any show that contains the substring of their search.
+// If nothing is matched return a message: "No shows about that topic yet!" Use any functions you may have already created.
 
 
 
