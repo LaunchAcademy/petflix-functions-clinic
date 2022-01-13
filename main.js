@@ -1,5 +1,5 @@
 const dramas = [
-  "Stanger Llamas",
+  "Stranger Llamas",
   "Game of Bones",
   "Llama Actually",
   "Grey's Catanomy",
@@ -28,7 +28,7 @@ const comedies = [
 ]
 
 const allShows = [
-  "Stanger Llamas",
+  "Stranger Llamas",
   "Game of Bones",
   "Llama Actually",
   "Llamanitor",
@@ -52,23 +52,33 @@ const allShows = [
 ]
 
 
-// 1. We heard raving reviews about all the llama dramas on Petflix!
-//Create a function that returns every show in the `dramas` array that has the word `"Llama"` in it.
+// 1. Find, and console.log, the index of the show "Game of Bones" in the "dramas" array. Find the same within the "allShows" array.
+
+// 2. How many shows are there in total? (Hint: look at the "allShows" array!)
+
+// 3. Is there a show called "The Hisser"?
+
+// 4. Add "Purression" to both the "dramas" and "allShows" arrays.
+
+// 5. We heard raving reviews about all the llama dramas on Petflix!
+// Iterate through the `dramas` array and create a new array that includes every show that has the word `"Llama"` in it.
 
 
-// 2. We are very picky when it comes to our funny tv shows.
-//Write a function will return every show in our `comedies` array that does *NOT* have the word `"Cat"` in it.
+// 6. We are very picky when it comes to our funny tv shows.
+// Iterate through the `comedies` array and create a new array that includes every show that does *NOT* have the word `"Cat"` in it.
 
 
-// 3. Our significant other is a significant dog person.
-//Write a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
+// 7. Our significant other is a significant dog person.
+// For each of the arrays, create a new array that includes every show that contains the word "dog".
 
 
+// 8. Refactor the above by writing a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
 
-// 3.5. Do the same for cats!
+
+// 8.5. Create the same type of function for cats!
 
 
-// 4. Write a function that takes in a string and an array of shows, and returns all shows from the given array that contain that substring.
+// 9. Write a function that takes in a string and an array of shows, and returns all shows from the given array that contain that substring.
 
 
 const petFlixOptions = [
@@ -84,7 +94,7 @@ const errorMessages = [
   "404: Four-O-Fur Not Found"
 ]
 
-// 5. [For this step, you may want to work on each browsing option individually first.
+// 9. [For this step, you may want to work on each browsing option individually first.
 //Also, you should be storing this functionality in seperate functions where possible]
 //Give the user a selection of browsing options shown in petFlixOptions.
 //Begin by welcoming the user to petflix, and then display to them their options:
