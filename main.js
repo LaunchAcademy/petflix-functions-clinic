@@ -53,23 +53,47 @@ const allShows = [
 
 
 // 1. Find, and console.log, the index of the show "Game of Bones" in the "dramas" array. Find the same within the "allShows" array.
+// find the index
+const dramasIndex = dramas.indexOf("Game of Bones")
+const allShowsIndex = allShows.indexOf("Game of Bones")
+// console.log that index
+console.log(dramasIndex)
+console.log(allShowsIndex)
 
 // 2. How many shows are there in total? (Hint: look at the "allShows" array!)
+console.log(allShows.length)
 
 // 3. Is there a show called "The Hisser"?
+console.log(allShows.includes("The Hisser"))
 
 // 4. Add "Purression" to both the "dramas" and "allShows" arrays.
+dramas.push("Purression")
+allShows.push("Purression")
 
 // 5. We heard raving reviews about all the llama dramas on Petflix!
 // Iterate through the `dramas` array and create a new array that includes every show that has the word `"Llama"` in it.
-
+const llamaDramas = []
+dramas.forEach( (show) => {
+  if (show.includes("Llama")) {
+    llamaDramas.push(show)
+  }
+})
+console.log(`Llama Dramas: ${llamaDramas}`)
 
 // 6. We are very picky when it comes to our funny tv shows.
 // Iterate through the `comedies` array and create a new array that includes every show that does *NOT* have the word `"Cat"` in it.
-
+const funnyFelineFree = []
+for (let i = 0; i < comedies.length; i++) {
+  if (!comedies[i].includes("Cat")) {
+    funnyFelineFree.push(comedies[i])
+  }
+}
+console.log(funnyFelineFree)
 
 // 7. Our significant other is a significant dog person.
 // For each of the arrays, create a new array that includes every show that contains the word "dog".
+
+
 
 
 // 8. Refactor the above by writing a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
