@@ -27,7 +27,7 @@ const comedies = [
   "Full Mouse"
 ]
 
-const allShows = [
+let allShows = [
   "Stranger Llamas",
   "Game of Bones",
   "Llama Actually",
@@ -53,23 +53,123 @@ const allShows = [
 
 
 // 1. Find, and console.log, the index of the show "Game of Bones" in the "dramas" array. Find the same within the "allShows" array.
+console.log("Index of Game of Bones in Dramas:")
+console.log(dramas.indexOf("Game of Bones"))
+
+console.log("Index of Game of Bones in All Shows:")
+console.log(allShows.indexOf("Game of Bones"))
+
+console.log("Index of Game of Bones in Dramas using findIndex:")
+const indexOfGameOfBones = dramas.findIndex(showName => {
+  return showName === "Game of Bones"
+})
+// const indexOfGameOfBones = dramas.findIndex(showName => showName === "Game of Bones")
+console.log(indexOfGameOfBones)
 
 // 2. How many shows are there in total? (Hint: look at the "allShows" array!)
 
+console.log("Number of shows in total:")
+console.log(allShows.length)
+
 // 3. Is there a show called "The Hisser"?
+
+console.log("Is there a show called The Hisser?")
+console.log(allShows.includes("The Hisser"))
 
 // 4. Add "Purression" to both the "dramas" and "allShows" arrays.
 
+// .push
+console.log("Add Purression to dramas")
+// dramas.push("Purression")
+
+// add to the beginning instead
+dramas.unshift("Purression")
+
+console.log(dramas)
+
+// .concat
+
+console.log("Add Purression to allShows")
+
+allShows = allShows.concat("Purression")
+
+console.log(allShows)
+
+
+// const recommendationArray = dramas.map(showTitle => {
+//   return `You should watch ${showTitle}`
+// })
+
+// console.log(recommendationArray)
+
 // 5. We heard raving reviews about all the llama dramas on Petflix!
 // Iterate through the `dramas` array and create a new array that includes every show that has the word `"Llama"` in it.
+
+// iterate through dramas
+// create a new array
+// should have all titles with "Llama"
+
+// let llamaArray = []
+
+// dramas.forEach(showTitle => {
+//   // if the showTitle includes the word "Llama"
+//   if(showTitle.includes("Llama")) {
+//     // put it in the llamaArray
+//     // llamaArray = llamaArray.concat(showTitle)
+//     llamaArray.push(showTitle)
+//   }
+// })
+
+let llamaArray = dramas.filter(showTitle => {
+  return showTitle.includes("Llama")
+})
+
+console.log("All dramas with the word 'Llama'")
+console.log(llamaArray)
 
 
 // 6. We are very picky when it comes to our funny tv shows.
 // Iterate through the `comedies` array and create a new array that includes every show that does *NOT* have the word `"Cat"` in it.
 
+let noCatsArray = comedies.filter(showTitle => {
+  // look for the show titles that DON'T include "Cat"
+  return !showTitle.includes("Cat")
+})
+
+console.log("All comedies without cats")
+console.log(noCatsArray)
+
 
 // 7. Our significant other is a significant dog person.
 // For each of the arrays, create a new array that includes every show that contains the word "dog".
+
+const allArrays = [dramas, comedies, animations, allShows]
+debugger
+// [
+  //   ["my dramas"],
+  //   ["my comedies"]
+  // ]
+  
+// for each of the arrays of shows
+allArrays.forEach(arrayOfShows => {
+  // create a new array 
+  // that includes every show containing "Dog"
+  let filteredArray = arrayOfShows.filter(showTitle => {
+    return showTitle.includes("Dog")
+  })
+  // console.log that array
+  console.log(filteredArray)
+})
+
+// for(let arrayOfShows of allArrays) {
+
+// }
+
+// for(let i = 0; i < allArrays.length; i++) {
+
+// }
+
+
 
 
 // 8. Refactor the above by writing a function that takes an an array of shows as an argument, and returns an array of shows from that array that contains the word "dog"
@@ -99,11 +199,11 @@ const errorMessages = [
 //Give the user a selection of browsing options shown in petFlixOptions.
 //Begin by welcoming the user to petflix, and then display to them their options:
 
-console.log("Welcome to Petflix")
+// console.log("Welcome to Petflix")
 
-console.log("Your options for browsing are:")
+// console.log("Your options for browsing are:")
 
-console.log(petFlixOptions.join("\n"))
+// console.log(petFlixOptions.join("\n"))
 
 // - If they choose search, then prompt for input and return any show that contains the substring of their search.
 // If nothing is matched return a message: "No shows about that topic yet!" Use any functions you may have already created.
